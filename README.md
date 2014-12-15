@@ -62,8 +62,11 @@ Compute FDR threshold by computing following rate: number of positions with *n* 
 
 ## Parameters
 -f File containing first 4  columns of .sam files without header
+
 -g Corresponding annotation file in GTF format
+
 -r Range of nucleotides in one direction from the position to calculate number of reads starting in the range: position +- range_number, default value: 15
+
 -i Number of iterations to generate randomized datasets from input file, default value: 100
 
 ## Output
@@ -79,17 +82,26 @@ Compute k-mer z-scores by its occurence in randomized datasets.
 
 ## Parameters
 -f File containing first containing two columns: <position><reads number>
+
 -fa Fasta file containing reference nucleotide sequence in fa.tab format with two columns: <organism name><reference sequence>
+
 -g Corresponding annotation file in GTF format
+
 -t FDR threshold value
+
 -r Range of nucleotides in one direction from the position to calculate number of reads starting in the range: position +- range_number, default value: 15
+
 -i Number of iterations to generate randomized datasets from input file, default value: 100
+
 -k k-mer type: pentamer, hexamer, etc.
+
 -l Length of sequence to output into seq.txt file: position +- length, default value: 10
 
 ## Output
-Two files:
+Two files are produced:
+
 <kmer>_seq.txt contains sequence for positions above threshold +- *l*
+
 <kmer>_zscores.csv contains three columns: <kmer><occurence in real data above threshold><zscore>
 
 ## Command
@@ -102,8 +114,11 @@ Create barplot by computing reads fraction started at each gene
 
 ## Parameters
 -f File containing first containing two columns: <position><reads number>
+
 -g Corresponding annotation file in GTF format
+
 -n number of genes, default value: all genes detected in GTF file
+
 -t plot title, default value: "Barplot"
 
 ## Output
@@ -119,9 +134,13 @@ Create boxplot by computing dividing each gene into *p* parts and counting numbe
 
 ## Parameters
 -f File containing first containing two columns: <position><reads number>
+
 -g Corresponding annotation file in GTF format
+
 -n number of genes, default value: all genes detected in GTF file
+
 -t plot title, default value: "Boxplot"
+
 -p number of parts, into which all genes will be divide, default value: 100
 
 ## Output
