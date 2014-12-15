@@ -1,0 +1,15 @@
+## gtf file
+Yoshisaur_Munchakoopas	Cufflinks	exon	1364	2512	1000	+	.	gene_id "Funny gene 1"; transcript_id "Funny gene 1"; exon_number "1"; FPKM "821179.8700529502"; frac "1.000000"; conf_lo "710598.516766"; conf_hi "931761.223340"; cov "18.348443";
+Yoshisaur_Munchakoopas	Cufflinks	exon	2542	3152	1000	+	.	gene_id "Funny gene 2"; transcript_id "Funny gene 2"; exon_number "1"; FPKM "202943.4917288162"; frac "1.000000"; conf_lo "119533.924016"; conf_hi "286353.059442"; cov "4.534569";
+Yoshisaur_Munchakoopas	Cufflinks	exon	4066	4767	1	+	.	gene_id "Funny gene 3"; transcript_id "Funny gene 3"; exon_number "1"; FPKM "0.0000000000"; frac "0.000000"; conf_lo "0.000000"; conf_hi "0.000000"; cov "0.000000";
+Yoshisaur_Munchakoopas	Cufflinks	exon	4768	5206	1000	+	.	gene_id "Funny gene 4"; transcript_id "Funny gene 4"; exon_number "1"; FPKM "251139.2845031600"; frac "1.000000"; conf_lo "129318.837827"; conf_hi "372959.731179"; cov "5.611456";
+Yoshisaur_Munchakoopas	Cufflinks	exon	5275	6354	1	+	.	gene_id "Funny gene 5"; transcript_id "Funny gene 5"; exon_number "1"; FPKM "0.0000000000"; frac "0.000000"; conf_lo "0.000000"; conf_hi "0.000000"; cov "0.000000";
+Yoshisaur_Munchakoopas	Cufflinks	exon	6397	6765	1	-	.	gene_id "Funny gene 6"; transcript_id "Funny gene 6"; exon_number "1"; FPKM "0.0000000000"; frac "0.000000"; conf_lo "0.000000"; conf_hi "0.000000"; cov "0.000000";
+Yoshisaur_Munchakoopas	Cufflinks	exon	6839	8075	1	-	.	gene_id "Funny gene 7"; transcript_id "Funny gene 7"; exon_number "1"; FPKM "0.0000000000"; frac "0.000000"; conf_lo "0.000000"; conf_hi "0.000000"; cov "0.000000";
+Yoshisaur_Munchakoopas	Cufflinks	exon	8166	9122	1	-	.	gene_id "Funny gene 8"; transcript_id "Funny gene 8"; exon_number "1"; FPKM "0.0000000000"; frac "0.000000"; conf_lo "0.000000"; conf_hi "0.000000"; cov "0.000000";
+Yoshisaur_Munchakoopas	Cufflinks	exon	9111	9736	1	+	.	gene_id "Funny gene 9"; transcript_id "Funny gene 9"; exon_number "1"; FPKM "0.0000000000"; frac "0.000000"; conf_lo "0.000000"; conf_hi "0.000000"; cov "0.000000";
+Yoshisaur_Munchakoopas	Cufflinks	exon	9775	10815	1	-	.	gene_id "Funny gene 10"; transcript_id "Funny gene 10"; exon_number "1"; FPKM "0.0000000000"; frac "0.000000"; conf_lo "0.000000"; conf_hi "0.000000"; cov "0.000000";
+Yoshisaur_Munchakoopas	Cufflinks	exon	10712	12445	1	-	.	gene_id "Funny gene 11"; transcript_id "Funny gene 11"; exon_number "1"; FPKM "0.0000000000"; frac "0.000000"; conf_lo "0.000000"; conf_hi "0.000000"; cov "0.000000";
+Yoshisaur_Munchakoopas	Cufflinks	exon	12780	14090	1	+	.	gene_id "Funny gene 12"; transcript_id "Funny gene 12"; exon_number "1"; FPKM "0.0000000000"; frac "0.000000"; conf_lo "0.000000"; conf_hi "0.000000"; cov "0.000000";
+Yoshisaur_Munchakoopas	Cufflinks	exon	14310	14481	1	+	.	gene_id "Funny gene 13"; transcript_id "Funny gene 13"; exon_number "1"; FPKM "0.0000000000"; frac "0.000000"; conf_lo "0.000000"; conf_hi "0.000000"; cov "0.000000";
+Yoshisaur_Munchakoopas	Cufflinks	exon	14490	16259	1	+	.	gene_id "Funny gene 14"; transcript_id "Funny gene 14"; exon_number "1"; FPKM "0.0000000000"; frac "0.000000"; conf_lo "0.000000"; conf_hi "0.000000"; cov "0.000000";
