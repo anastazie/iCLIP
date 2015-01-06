@@ -135,12 +135,12 @@ def compute_fdr(input_file, gtf_file, range_number, rand_iter):
         md_table.append(row)
     
    fdr_table = []
-   for i in range(0, len(p_table)):
-        row = [p_table[i][0]]
+   for i in range(0, len(md_table)):
+        row = [md_table[i][0]]
     
         index = np.where(real_freq_ph[:,0] == row[0])[0]
         if (len(index) > 0):
-            fdr = (p_table[i][1] + p_table[i][2]) / real_freq_ph[index[0]][2]
+            fdr = (md_table[i][1] + md_table[i][2]) / real_freq_ph[index[0]][2]
             row.append(fdr)     
             fdr_table.append(row)
    output_file = input_file[:-4] + '_fdr.csv' 

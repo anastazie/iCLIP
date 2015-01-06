@@ -24,22 +24,22 @@ Example data and results are in ToyExample folder.
 
 # Installation
 Clone git repository by following command
-`< git clone https://github.com/anastazie/iCLIP >`
+`git clone https://github.com/anastazie/iCLIP`
 
 # Getting help
 In order to get full list of parameters for function type:
-`< python <function_name> -h >`
+`python <function_name> -h`
 
 # Data preprocessing
 
 ## SAM files
 This package use only positions in sam file.
 Before running scripts extract first 4 columns without header using following command:
-`< grep -v "^@" test.sam |cut -f1,2,3,4 > test1_sub.sam >`
+` grep -v "^@" test.sam |cut -f1,2,3,4 > test1_sub.sam `
 
 ## GTF files
 Preprocess GFT file by removing header using following command:
-`< grep -v "^##" test.gtf  > test_nohead.gtf >`
+`grep -v "^##" test.gtf  > test_nohead.gtf`
 
 # Get real frequencies
 
@@ -50,15 +50,15 @@ Compute number of mapped reads starting at each genome position
 -f File containing first 4  columns of .sam files without header
 
 ## Output
-CSV file _real_freq.csv containing two columns: <position><number of reads starting in this position>
+CSV file real_freq.csv containing two columns: <position><number of reads starting in this position>
 
 ## Command
-`< python iclipRealFreq.py -f test1_sub.sam >`
+`python iclipRealFreq.py -f test1_sub.sam`
 
 # Compute FDR (False Discovery Rate) threshold
 
 ## Description
-Compute FDR threshold by computing following rate: number of positions with *n* reads / mean number of positions with *n* reads across *i* iterations of randomized datasets 
+Compute FDR threshold using following formula: (mean number of positions with *n* reads across *i* iterations of randomized datasets - standard deviation of positions with *n* reads across *i* iterations of randomized datasets) / number of positions with *n* reads in real dataset 
 
 ## Parameters
 -f File containing first 4  columns of .sam files without header
@@ -73,12 +73,14 @@ Compute FDR threshold by computing following rate: number of positions with *n* 
 CSV file containing two columns: <reads number><FDR probability>
 
 ## Command
-`< python iclipFdr.py -f test1_sub.sam -g test_nohead.gtf -r 20 -i 10 >`
+`python iclipFdr.py -f test1_sub.sam -g test_nohead.gtf -r 20 -i 10`
 
 # Compute z-scores for k-mers
 
 ## Description
-Compute k-mer z-scores by its occurence in randomized datasets. 
+Compute k-mer z-scores using following formula: (number k-mer in real dataset - mean number of k-mers across *i* iterations of randomized datasets)/standard deviation of k-mers number across *i* iterations of randomized datasets 
+
+Only positions (both in real and randomized datasets) above specified threshold are considered for this computation.
 
 ## Parameters
 -f File containing first containing two columns: <position><reads number>
@@ -105,7 +107,7 @@ Two files are produced:
 <kmer>_zscores.csv contains three columns: <kmer><occurence in real data above threshold><zscore>
 
 ## Command
-`< iclipZscores.py -f test1_sub.sam -fa test.fa.tab -g test_nohead.gtf -t 100 -r 15 -i 10 -k 4 -l 5>`
+`iclipZscores.py -f test1_sub.sam -fa test.fa.tab -g test_nohead.gtf -t 100 -r 15 -i 10 -k 4 -l 5`
 
 # Create barplot with read fraction per each gene
 
@@ -125,7 +127,7 @@ Create barplot by computing reads fraction started at each gene
 PNG file with barplot, x - gene name, y - reads fraction, %
 
 ## Command
-`< iclipBarplot.py -f test1_sub_real_freq.csv -g test_nohead.gtf -n 5 -t testBar >`
+`iclipBarplot.py -f test1_sub_real_freq.csv -g test_nohead.gtf -n 5 -t testBar`
 
 # Get boxplot with reads fraction per each gene interval
 
@@ -147,7 +149,7 @@ Create boxplot by computing dividing each gene into *p* parts and counting numbe
 PNG file containing boxplot per each gene (distribution of reads number in ech interval)
 
 ## Command
-`< iclipBoxplot.py -f test1_sub_real_freq.csv -g test_nohead.gtf -n 5 -t testBox -p 100 >`
+`iclipBoxplot.py -f test1_sub_real_freq.csv -g test_nohead.gtf -n 5 -t testBox -p 100`
 
 # References
 1. Wagnon, Jacy L., et al. "CELF4 regulates translation and local abundance of a vast set of mRNAs, including genes associated with regulation of synaptic function." PLoS genetics 8.11 (2012): e1003067.

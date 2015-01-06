@@ -125,7 +125,7 @@ def compute_z_score(input_file, ref_seq, gtf_file, threshold, range_number, rand
         
         rand_freq_list.append(rand_freq)
 
-#    rand_freq = get_frequencies(rand, 15)
+    #rand_freq = get_frequencies(rand, 15)
     
     rand_pent_table = np.array(np.empty((p.high+1, len(rand_freq_list))))
     #rand_pent_table[:,0] = p.__list__
