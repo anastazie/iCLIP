@@ -12,7 +12,7 @@ Anastassiya Zidkova and Martin Zidek
 
 # Description
 Code in python and test data for RNA iCLIP analysis.
-this repository containd 4 scripts:
+This repository contains 4 scripts that you can run:
 
 * iclipBarplot.py
 * iclipBoxplot.py
@@ -25,6 +25,19 @@ Example data and results are in ToyExample folder.
 # Installation
 Clone git repository by following command
 `git clone https://github.com/anastazie/iCLIP`
+
+# Dependencies
+To use **iCLIPit** you need to have following packages: [numPy](http://www.numpy.org/), [pandas](http://pandas.pydata.org/)
+
+You can install them on terminal by running following commands:
+
+`sudo pip install numpy`
+
+`sudo pip install pandas`
+
+`sudo pip install python-dateutil --upgrade`
+
+`sudo pip install pytz --upgrade`
 
 # Getting help
 In order to get full list of parameters for function type:
